@@ -1,9 +1,15 @@
 
 
-Body{
-    background-image: url(../assets/background.jpg);
-    background-size: 1920px 946px;
+Body {
+
+    
+    /* background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
+    background-image: url(../assets/image.png); */
+    background-color: #212121;
+
+    background-size: 2200px 1080px;
     color: #fff;
+    font-family: 'Poppings', sans-serif;
 
     min-height: 100vh;
     display: flex;
@@ -13,13 +19,171 @@ Body{
 
     overflow-y: hidden;
     overflow-x: hidden;
+    
 ;
 }
 
-canvas{
-    border: solid 10px #c27503;
-    border-radius: 5px;
+canvas {
+    border: solid 10px #F2D110;
+    border-radius: 10px;
     background-image: url(../assets/background__game.png) ;
 
     
+}
+
+
+.img__logo{
+    position: absolute;
+    left: 36%;
+    top: 15%;
+    z-index: 1;
+}
+
+.score {
+    text-transform: uppercase;
+    top: 110px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.score__value {
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: block;
+    margin-top: -10px;
+}
+.menu__start {
+    top: 470px;
+    gap: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; 
+}
+.game__start {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.menu__start h1 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #005344;
+}
+.menu__start svg{
+    margin-top: 0.4rem;
+    color: #005344;
+}
+.menu__start svg:hover {
+    transition: all 0.5 s;
+    color: #fff;
+}
+
+.about__Dev {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.menu__screen {
+    top: 340px;
+    gap: 20px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.game__over {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.score__container{
+    display: flex;
+    gap: 3.5rem;
+    text-align: center;
+    align-items: center;
+}
+.score__container span{
+    
+    font-size: 1.5rem;
+}
+
+.best__score{
+    position: relative;
+    top: -15px;
+}
+.score__container span > span{
+    color: #005344;
+    font-size: 3rem;
+}
+
+.style__score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.final__score span {
+    color: #005344;
+}
+
+.btn__play{
+    border: 1px solid #005344;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0px;
+    color: #005344;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.btn__play-start{
+    border: 1px solid #005344;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0px;
+    color: #005344;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.btn__pla:hover {
+    filter: blur();
+}
+
+.div__speed {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .img__logo{
+        display: none;
+    }
 }
