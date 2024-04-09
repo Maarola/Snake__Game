@@ -1,6 +1,4 @@
 
-Projeto pessoal realizado para estudos, Game Snake um jogo Desenvolvido em HTML, CSS e JS 
-
 [LiveMode](https://maarola.github.io/Snake__Game/)
 
 <h1 aling="center">
