@@ -18,8 +18,8 @@ const imgLogo = document.querySelector(".img__logo")
 
 
 
-const audio__eating = new Audio("../assets/eating.mp3")
-const audio__move = new Audio("../assets/move.mp3")
+const audio__eating = new Audio("../audio/eating.mp3")
+const audio__move = new Audio("../audio/move.mp3")
 
 const size = 30
 
