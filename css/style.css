@@ -189,6 +189,9 @@ canvas {
 
 @media screen and (max-width: 1400px) {
     .img__logo{
-        display: none;
+        display: flex;
+        width: 400px;
+        height: 400px;
+        left: 24%;
     }
 }
