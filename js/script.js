@@ -5,18 +5,16 @@ const h1 = document.querySelector('h1')
 const ctx = canvas.getContext("2d")
 
 const scoreValue = document.querySelector('.score__value')
+const scoreText = document.querySelector(".score")
 const finalScore = document.querySelector('.final__score > span')
+const bestScore = document.querySelector(".best__score-value")
 const menu = document.querySelector(".menu__screen")
 const menuStart = document.querySelector(".menu__start")
 const buttonPlay = document.querySelector(".btn__play")
 const buttonPlayStart = document.querySelector(".btn__play-start")
-const scoreText = document.querySelector(".score")
-const bestScore = document.querySelector(".best__score-value")
 const speed = document.querySelector(".snake__speed")
 const speedValue = document.querySelector(".speed__value")
 const imgLogo = document.querySelector(".img__logo")
-
-
 
 const audio__eating = new Audio("../audio/eating.mp3")
 const audio__move = new Audio("../audio/move.mp3")
@@ -28,10 +26,9 @@ let snake = [
     {x: 300, y: 240},
 ]
 
-let direction, loopID
+let direction, loopID, bestScoreATT = "00"
 
 const score = () => {
-    scoreValue.innerText = +scoreValue.innerText + randomNumber(7, 10)
 
     let pontuacaoAtual = parseInt(scoreValue.innerText);
     let melhorPontuacaoAtual = parseInt(bestScore.innerText);
@@ -41,7 +38,7 @@ const score = () => {
     scoreValue.innerText = novaPontuacao;
 
     if (novaPontuacao > melhorPontuacaoAtual) {
-        bestScore.innerText = novaPontuacao;
+        bestScoreATT = novaPontuacao;
     }
 
 
@@ -184,6 +181,8 @@ const gameOver = () => {
     finalScore.innerText = scoreValue.innerText
     canvas.style.filter = "blur(3px)" 
     imgLogo.style.display = "none"
+
+    bestScore.innerText = bestScoreATT
     
     speed.disabled = false
 }
