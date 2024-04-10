@@ -220,19 +220,27 @@ gameStart()
 document.addEventListener("keydown", ({key}) =>{
     if(key == "ArrowRight" && direction != "left"){
         audio__move.play()
-        direction = "right"
+        setTimeout(() => {
+            direction = "right"
+        }, 150)
     }
     if(key == "ArrowLeft" && direction != "right"){
-        audio__move.play()
-        direction = "left"
+        audio__move.play()       
+        setTimeout(() => {
+            direction = "left"
+        }, 150)
     }
     if(key == "ArrowDown" && direction != "up"){
-        audio__move.play()
-        direction = "down"
+        audio__move.play()      
+        setTimeout(() => {
+            direction = "down"
+        }, 100)
     }
     if(key == "ArrowUp" && direction != "down"){
-        audio__move.play()
-        direction = "up"
+        audio__move.play()  
+        setTimeout(() => {
+            direction = "up"
+        }, 100)
     }
 })
 
